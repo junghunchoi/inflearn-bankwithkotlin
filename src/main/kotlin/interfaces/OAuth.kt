@@ -2,7 +2,8 @@ package com.lecture.interfaces
 
 interface OAuthServiceInterface{
     val providerName: String
-    fun getToken(code: String): String
+    fun getToken(code: String): OAuth2TokenResponse
+    fun getUserInfo(token: String): OAuth2UserResponse
 }
 
 interface OAuth2TokenResponse{
@@ -11,6 +12,6 @@ interface OAuth2TokenResponse{
 
 interface OAuth2UserResponse{
     val id: String
-    val emial: String?
+    val email: String?
     val name: String?
 }
