@@ -1,9 +1,9 @@
 package com.lecture.common.logging
 
+
 import com.lecture.common.exception.CustomException
 import com.lecture.common.exception.ErrorCode
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import org.slf4j.*
 
 object Logging{
     fun <T : Any> getLogger(clazz: Class<T>): Logger  = LoggerFactory.getLogger(clazz)

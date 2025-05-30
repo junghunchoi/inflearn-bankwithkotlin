@@ -22,5 +22,4 @@ data class User (
 
     @OneToMany(mappedBy = "user")
     val accounts: List<Account> = mutableListOf()
-
 )

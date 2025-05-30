@@ -36,10 +36,10 @@ class AuthService(
         val username = (userInfo.name ?: userInfo.email.toString())
 
         transaction.run {
-            val exist = authUserRepository.existsByUsernameAndPlatform(username)
+            val exist = authUserRepository.existsByUsername(username)
 
             if(exist){
-                authUserRepository.updateAccessToken(username, token)
+                authUserRepository.updateAccessTokenByUsername(username, token)
             }else{
                 val ulid = UlidCreator.getUlid().toString()
                 val user = User(ulid, username, token)
