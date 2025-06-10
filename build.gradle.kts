@@ -23,7 +23,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     // jwt
-    implementation("com.auth0:java-jwt:4.4.0")
+    implementation("com.auth0:java-jwt:3.12.0")
 
     // mysql
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
@@ -31,15 +31,28 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // security
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-security:3.2.3")
+
     // mongoDB
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-    //client
+    // client
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
-    //ulid
+    // ulid
     implementation("com.github.f4b6a3:ulid-creator:5.2.3")
+
+    // redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+    implementation("org.redisson:redisson-spring-boot-starter:3.36.0")
+
+    // kafka
+    implementation("org.springframework.kafka:spring-kafka:3.1.0")
+
+    testImplementation(kotlin("test"))
 
 }
 
